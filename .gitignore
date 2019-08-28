@@ -1,0 +1,7 @@
+*.iml
+.gradle
+build
+.idea
+out/
+logs/
+.attach_pid*
