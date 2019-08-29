@@ -28,6 +28,7 @@ Edge - data class. Represents connection between two vertices.
 ```java
 //source vertex
 Vertex getSource() 
+
 //destination vertex
 Vertex getDestination()
 ```
