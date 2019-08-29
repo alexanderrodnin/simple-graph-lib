@@ -199,7 +199,7 @@ Graph graph = GraphBuilder.<String>undirected()
 
 ```
 
-### Build
+### Project build
 Repository contains gradlew wrapper and gradle build.
 For build project next command should be executed:
 ```java
