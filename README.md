@@ -124,7 +124,7 @@ com.alexanderrodnin.simplegraphlib.exceptions.EdgeAlreadyExistException
 ```
 throws if graph already contains the edge.
 
-####GraphHasNotContainVertex
+#### GraphHasNotContainVertex
 ```java
 com.alexanderrodnin.simplegraphlib.exceptions.GraphHasNotContainVertex
 ```
