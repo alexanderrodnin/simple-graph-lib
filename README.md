@@ -97,7 +97,7 @@ DefaultGraphImplementation represent graph structure as
 private final Map<Vertex, Set<Vertex>> graph = new HashMap<>();
 ```
 Used for directed and undirected graph.  
-For undirected graph this structure is denormolized. It was made for asses efficiently to vertices and edges with O(1).  
+For undirected graph this structure is denormolized. It was made for access efficiently to vertices and edges with O(1).  
 Be carefull: methods of DefaultGraphModel:
 ```java
 // Returns all edges
