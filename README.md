@@ -63,8 +63,8 @@ Set<Vertex> getAllVertices();
 // Returns all edges
 Set<Edge> getAllEdges();
 
-// Returns edged vertices
-Set<Vertex> getEdgedVertices(Vertex vertex);
+// Returns connected vertices
+Set<Vertex> getConnectedVertices(Vertex vertex);
 
 // check if vertex contains
 boolean containsVertex(Vertex vertex);
@@ -88,8 +88,8 @@ Be carefull: methods of DefaultGraphModel:
 // Returns all edges
 Set<Edge> getAllEdges();
 
-// Returns edged vertices
-Set<Vertex> getEdgedVertices(Vertex vertex);
+// Returns connected vertices
+Set<Vertex> getConnectedVertices(Vertex vertex);
 ```
 Returens mutalbe sets. It also was made for efficient.
 

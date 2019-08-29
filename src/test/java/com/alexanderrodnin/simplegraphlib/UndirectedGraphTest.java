@@ -53,10 +53,10 @@ public class UndirectedGraphTest {
         vertices.forEach(vertex -> graph.addVertex(vertex));
         graph.addEdge(new Edge<>("A", "B"));
 
-        Assertions.assertEquals(1, model.getEdgedVertices("A").size());
+        Assertions.assertEquals(1, model.getConnectedVertices("A").size());
         Assertions.assertTrue(model.containsEdge("A", "B"));
 
-        Assertions.assertEquals(1, model.getEdgedVertices("B").size());
+        Assertions.assertEquals(1, model.getConnectedVertices("B").size());
         Assertions.assertTrue(model.containsEdge("B", "A"));
     }
 

@@ -49,10 +49,10 @@ public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
     }
 
     /**
-     * @see GraphModel#getEdgedVertices(Object)
+     * @see GraphModel#getConnectedVertices(Object)
      */
     @Override
-    public Set<Vertex> getEdgedVertices(Vertex vertex) {
+    public Set<Vertex> getConnectedVertices(Vertex vertex) {
         return graph.get(vertex);
     }
 

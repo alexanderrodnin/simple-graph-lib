@@ -40,7 +40,7 @@ public class FirstFoundPathFindStrategy<Vertex> implements PathFindStrategy<Vert
             if (current.equals(destination)) {
                 firsFoundPath.setValue(new ArrayList<>(path));
             } else {
-                for (Vertex nearest : graphModel.getEdgedVertices(current)) {
+                for (Vertex nearest : graphModel.getConnectedVertices(current)) {
                     if (!path.contains(nearest)) {
                         recursiveFind(firsFoundPath, graphModel, nearest, destination, path);
                     }

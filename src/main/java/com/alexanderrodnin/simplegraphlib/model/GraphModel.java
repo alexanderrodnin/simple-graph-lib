@@ -11,7 +11,7 @@ public interface GraphModel<Vertex> {
 
     Set<Edge> getAllEdges();
 
-    Set<Vertex> getEdgedVertices(Vertex vertex);
+    Set<Vertex> getConnectedVertices(Vertex vertex);
 
     boolean containsVertex(Vertex vertex);
 
