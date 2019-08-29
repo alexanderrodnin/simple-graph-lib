@@ -112,7 +112,7 @@ return mutalbe sets. It also was made for efficient.
 ```java
 com.alexanderrodnin.simplegraphlib.finder.PathFindStrategy
 ```
-PathFindStrategy represents the strategy of path finding algorithm between two Vertices.
+PathFindStrategy represents the strategy of path finding algorithm between two vertices.
 ##### Methods:
 ```java
 // FindPath
@@ -123,7 +123,7 @@ PathFindStrategy has one implementation:
 ```java
 com.alexanderrodnin.simplegraphlib.finder.FirstFoundPathFindStrategy
 ```
-It's a simple recursive in depth algorithm of finding first(path doesn’t have to be optima) between two vertices. 
+It's a simple recursive in depth algorithm of finding first(path doesn’t have to be optimal) between two vertices. 
 
 
 ### Exceptions
