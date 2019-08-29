@@ -181,7 +181,7 @@ Graph graph = GraphBuilder.<String>directed()
         .build();
 
 // with constructor
-        Graph<String> graph = new DirectedGraph<>();
+Graph<String> graph = new DirectedGraph<>();
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge(new Edge<>("B", "A"));
@@ -197,7 +197,7 @@ Graph graph = GraphBuilder.<String>directed()
         .build();
 
 // with constructor
-        Graph<String> graph = new DirectedGraph<>();
+Graph<String> graph = new DirectedGraph<>();
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addEdge(new Edge<>("B", "A"));
