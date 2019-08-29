@@ -27,7 +27,7 @@ public abstract class AbstractBaseGraph<Vertex> implements Graph<Vertex>  {
     }
 
     /**
-     * @see Graph#addVertex
+     * @see Graph#addVertex .
      */
     @Override
     public void addVertex(Vertex vertex) {

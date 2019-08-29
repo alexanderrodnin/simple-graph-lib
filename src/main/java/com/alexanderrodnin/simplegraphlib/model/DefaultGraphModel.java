@@ -6,6 +6,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+/**
+ * Default implementation of #GraphModel .
+ * @param <Vertex> - vertex
+ */
 public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
 
     private final Map<Vertex, Set<Vertex>> graph = new HashMap<>();

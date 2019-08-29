@@ -5,8 +5,8 @@ import com.alexanderrodnin.simplegraphlib.model.Edge;
 import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
 /**
- * Direct graph implementation
- * @param <Vertex> - vertex
+ * Direct graph implementation.
+ * @param <Vertex> - vertex.
  */
 public class DirectedGraph<Vertex> extends AbstractBaseGraph<Vertex> {
 

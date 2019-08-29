@@ -9,6 +9,10 @@ import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Graph builder
+ * @param <Vertex> - vertex.
+ */
 public class GraphBuilder<Vertex> {
 
     private enum GraphType {
@@ -26,39 +30,78 @@ public class GraphBuilder<Vertex> {
         this.graphType = graphType;
     }
 
+    /**
+     * Create directed graph.
+     * @param <Vertex> - vertex.
+     * @return #GraphBuilder .
+     */
     public static <Vertex> GraphBuilder<Vertex> directed() {
         return new GraphBuilder<>(GraphType.DIRECTED);
     }
 
+    /**
+     * Create undirected graph.
+     * @param <Vertex> - vertex.
+     * @return #GraphBuilder .
+     */
     public static <Vertex> GraphBuilder<Vertex> undirected() {
         return new GraphBuilder<>(GraphType.UNDIRECTED);
     }
 
+    /**
+     * Set custom path find strategy.
+     * @param pathFindStrategy - custom path find strategy.
+     * @return #GraphBuilder .
+     */
     public GraphBuilder<Vertex> setCustomPathFindStrategy(PathFindStrategy<Vertex> pathFindStrategy) {
         this.pathFindStrategy = pathFindStrategy;
         return this;
     }
 
+    /**
+     * Set custom model.
+     * @param graphModel - custom graph model.
+     * @return #GraphBuilder .
+     */
     public GraphBuilder<Vertex> setCustomGraphModel(GraphModel<Vertex> graphModel) {
         this.graphModel = graphModel;
         return this;
     }
 
+    /**
+     * Add vertex.
+     * @param vertex - vertex.
+     * @return #GraphBuilder .
+     */
     public GraphBuilder<Vertex> addVertex(Vertex vertex) {
         vertices.add(vertex);
         return this;
     }
 
+    /**
+     * Add edge
+     * @param source - destination vertex.
+     * @param destination - destination vertex.
+     * @return #GraphBuilder .
+     */
     public GraphBuilder<Vertex> addEdge(Vertex source, Vertex destination) {
         return addEdge(new Edge<>(source, destination));
     }
 
-
+    /**
+     * Add edge
+     * @param edge - #Edge that should be added.
+     * @return #GraphBuilder .
+     */
     public GraphBuilder<Vertex> addEdge(Edge<Vertex> edge) {
         edges.add(edge);
         return this;
     }
 
+    /**
+     * Build graph
+     * @return instance of #Graph .
+     */
     public Graph<Vertex> build() {
         Graph<Vertex> graph = graph();
 

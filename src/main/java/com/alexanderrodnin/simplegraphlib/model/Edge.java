@@ -10,18 +10,18 @@ import java.util.Objects;
 public class Edge<Vertex> {
 
     /**
-     * @return source vertex
+     * @return source vertex.
      */
     private final Vertex source;
     /**
-     * @return destination vertex
+     * @return destination vertex.
      */
     private final Vertex destination;
 
     /**
      * Create a new Edge.
-     * @param source - source vertex
-     * @param destination - destination vertex
+     * @param source - source vertex.
+     * @param destination - destination vertex.
      */
     public Edge(Vertex source, Vertex destination) {
         this.source = source;
