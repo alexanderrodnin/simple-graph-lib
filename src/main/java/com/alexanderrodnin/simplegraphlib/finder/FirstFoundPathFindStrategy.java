@@ -25,6 +25,10 @@ public class FirstFoundPathFindStrategy<Vertex> implements PathFindStrategy<Vert
     }
 
 
+    /**
+     * @see PathFindStrategy .
+     * @return first found path between two vertices.
+     */
     public List<Vertex> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination) {
         Wrapper<List<Vertex>> firstFoundPath = new Wrapper<>(new ArrayList<>());
         recursiveFind(firstFoundPath, graphModel, source, destination, new LinkedHashSet<>());
