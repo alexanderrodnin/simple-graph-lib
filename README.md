@@ -206,7 +206,7 @@ For build project next command should be executed:
 // for linux, mac
 ./gradlew build
 
-//for windows
+// for windows
 gradlew.bat build
 ```
 
