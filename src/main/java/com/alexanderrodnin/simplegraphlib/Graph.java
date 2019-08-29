@@ -28,6 +28,6 @@ public interface Graph<Vertex> {
      * @param destination - destination vertex.
      * @return path between two vertices.
      */
-    List<Vertex> getPath(Vertex source, Vertex destination);
+    List<Edge<Vertex>> getPath(Vertex source, Vertex destination);
 
 }

@@ -39,7 +39,7 @@ public abstract class AbstractBaseGraph<Vertex> implements Graph<Vertex>  {
     }
 
     @Override
-    public List<Vertex> getPath(Vertex source, Vertex destination) {
+    public List<Edge<Vertex>> getPath(Vertex source, Vertex destination) {
         return pathFindStrategy.findPath(model, source, destination);
     }
 

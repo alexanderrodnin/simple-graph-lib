@@ -1,5 +1,6 @@
 package com.alexanderrodnin.simplegraphlib.finder;
 
+import com.alexanderrodnin.simplegraphlib.model.Edge;
 import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
 import java.util.List;
@@ -18,6 +19,6 @@ public interface PathFindStrategy<Vertex> {
      * @param destination - destination vertex.
      * @return path between two vertices
      */
-    List<Vertex> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination);
+    List<Edge<Vertex>> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination);
 
 }

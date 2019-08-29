@@ -76,7 +76,9 @@ class UsageTest {
     @Test
     void initUndirectedGraphWithCustomPathFinderByBuilder() {
         Graph graph = GraphBuilder.<String>undirected()
-                .setCustomPathFindStrategy((graphModel, source, destination) -> new ArrayList<>( Arrays.asList("A", "B")))
+                .setCustomPathFindStrategy((graphModel, source, destination) ->
+                        new ArrayList<>(Arrays.asList(new Edge<>("A","B")))
+                )
                 .addVertex("A")
                 .addVertex("B")
                 .addEdge("A", "B")

@@ -1,5 +1,6 @@
 package com.alexanderrodnin.simplegraphlib.finder;
 
+import com.alexanderrodnin.simplegraphlib.model.Edge;
 import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
 import java.util.*;
@@ -27,13 +28,13 @@ public class FirstFoundPathFindStrategy<Vertex> implements PathFindStrategy<Vert
 
     /**
      * @see PathFindStrategy .
-     * @return first found path between two vertices.
+     * @return First found path between two vertices.
      */
-    public List<Vertex> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination) {
+    public List<Edge<Vertex>> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination) {
         Wrapper<List<Vertex>> firstFoundPath = new Wrapper<>(new ArrayList<>());
         recursiveFind(firstFoundPath, graphModel, source, destination, new LinkedHashSet<>());
 
-        return firstFoundPath.getValue();
+        return edges(firstFoundPath.getValue());
     }
 
     private void recursiveFind(
@@ -58,5 +59,15 @@ public class FirstFoundPathFindStrategy<Vertex> implements PathFindStrategy<Vert
 
             path.remove(current);
         }
+    }
+
+    private List<Edge<Vertex>> edges(List<Vertex> vertices) {
+        List<Edge<Vertex>> edges = new ArrayList<>();
+
+        for(int i = 0; i < vertices.size() -1 ; i++) {
+            edges.add(new Edge<>(vertices.get(i), vertices.get(i + 1)));
+        }
+
+        return edges;
     }
 }

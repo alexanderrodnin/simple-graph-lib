@@ -1,6 +1,7 @@
 package com.alexanderrodnin.simplegraphlib;
 
 import com.alexanderrodnin.simplegraphlib.finder.FirstFoundPathFindStrategy;
+import com.alexanderrodnin.simplegraphlib.model.Edge;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -33,8 +34,12 @@ class FirstFoundPathStrategyTest {
                 .addEdge("C", "D")
                 .build();
 
-        List<String> path = graph.getPath("A", "D");
-        Assertions.assertEquals(Arrays.asList("A", "B", "D"), path);
+        List<Edge<String>> path = graph.getPath("A", "D");
+        Assertions.assertEquals(
+                Arrays.asList(
+                        new Edge<>("A", "B"),
+                        new Edge<>("B", "D")),
+                path);
     }
 
 
@@ -61,8 +66,12 @@ class FirstFoundPathStrategyTest {
                 .addEdge("C", "D")
                 .build();
 
-        List<String> path = graph.getPath("A", "D");
-        Assertions.assertEquals(Arrays.asList("A", "C", "D"), path);
+        List<Edge<String>> path = graph.getPath("A", "D");
+        Assertions.assertEquals(
+                Arrays.asList(
+                        new Edge<>("A", "C"),
+                        new Edge<>("C", "D")),
+                path);
     }
 
 
