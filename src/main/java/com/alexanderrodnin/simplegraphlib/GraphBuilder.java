@@ -14,14 +14,12 @@ public class GraphBuilder<Vertex> {
     private enum GraphType {
         DIRECTED,
         UNDIRECTED,
-        CUSTOM
     }
 
     private GraphType graphType;
     private PathFindStrategy<Vertex> pathFindStrategy;
     private List<Vertex> vertexes = new ArrayList<>();
     private List<Edge<Vertex>> edges = new ArrayList<>();
-    private Graph<Vertex> customGraph;
     private GraphModel<Vertex> graphModel;
 
     private GraphBuilder(GraphType graphType) {
@@ -34,13 +32,6 @@ public class GraphBuilder<Vertex> {
 
     public static <Vertex> GraphBuilder<Vertex> undirected() {
         return new GraphBuilder<>(GraphType.UNDIRECTED);
-    }
-
-    public static <Vertex> GraphBuilder<Vertex> custom(Graph<Vertex> graph) {
-        GraphBuilder<Vertex> builder = new GraphBuilder<>(GraphType.CUSTOM);
-        builder.customGraph = graph;
-
-        return builder;
     }
 
     public GraphBuilder<Vertex> setCustomPathFindStrategy(PathFindStrategy<Vertex> pathFindStrategy) {
@@ -89,8 +80,6 @@ public class GraphBuilder<Vertex> {
                 graph = new UndirectedGraph<>(graphModel(), pathFindStrategy());
                 break;
             }
-            case CUSTOM:
-                graph = customGraph;
         }
 
         return graph;
