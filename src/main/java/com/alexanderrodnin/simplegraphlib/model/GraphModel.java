@@ -7,11 +7,11 @@ public interface GraphModel<Vertex> {
 
     void addEdge(Vertex source, Vertex destination);
 
-    Set<Vertex> getAllVertexes();
+    Set<Vertex> getAllVertices();
 
     Set<Edge> getAllEdges();
 
-    Set<Vertex> getEdgedVertexes(Vertex vertex);
+    Set<Vertex> getEdgedVertices(Vertex vertex);
 
     boolean containsVertex(Vertex vertex);
 

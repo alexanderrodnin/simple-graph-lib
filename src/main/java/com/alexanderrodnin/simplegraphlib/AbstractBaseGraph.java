@@ -42,7 +42,7 @@ public abstract class AbstractBaseGraph<Vertex> implements Graph<Vertex>  {
 
     @Override
     public String toString() {
-        return "Vertexes: " + model.getAllVertexes() + ", Edges: " + model.getAllEdges();
+        return "Vertices: " + model.getAllVertices() + ", Edges: " + model.getAllEdges();
     }
 
     protected void checkContainsVertex(Vertex vertex) {

@@ -30,7 +30,7 @@ void addVertex(Vertex vertex);
 // Add edge to the graph
 void addEdge(Edge<Vertex> edge);
 
-// Find path between two vertexes
+// Find path between two vertices
 List<Vertex> getPath(Vertex source, Vertex destination);
 
 ```
@@ -58,18 +58,18 @@ void addVertex(Vertex vertex);
 void addEdge(Vertex source, Vertex destination);
 
 // Returns all vertexies
-Set<Vertex> getAllVertexes();
+Set<Vertex> getAllVertices();
 
 // Returns all edges
 Set<Edge> getAllEdges();
 
-// Returns edged vertexes
-Set<Vertex> getEdgedVertexes(Vertex vertex);
+// Returns edged vertices
+Set<Vertex> getEdgedVertices(Vertex vertex);
 
 // check if vertex contains
 boolean containsVertex(Vertex vertex);
 
-// check if edge between two vertexes contains
+// check if edge between two vertices contains
 boolean containsEdge(Vertex source, Vertex destination);
 ```
 ##### Implementations
@@ -82,14 +82,14 @@ DefaultGraphImplementation represent graph structure as
 private final Map<Vertex, Set<Vertex>> graph = new HashMap<>();
 ```
 Used for Directed and undirected graph.  
-For undirected graph this structure is denormolized. It was made for asses efficiently to vertexes and edges with O(1)  
+For undirected graph this structure is denormolized. It was made for asses efficiently to vertices and edges with O(1)  
 Be carefull: methods of DefaultGraphModel:
 ```java
 // Returns all edges
 Set<Edge> getAllEdges();
 
-// Returns edged vertexes
-Set<Vertex> getEdgedVertexes(Vertex vertex);
+// Returns edged vertices
+Set<Vertex> getEdgedVertices(Vertex vertex);
 ```
 Returens mutalbe sets. It also was made for efficient.
 
@@ -97,7 +97,7 @@ Returens mutalbe sets. It also was made for efficient.
 ```java
 com.alexanderrodnin.simplegraphlib.finder.PathFindStrategy
 ```
-PathFindStrategy represents the strategy of path finding algorithm between two Vertexes
+PathFindStrategy represents the strategy of path finding algorithm between two Vertices
 ##### Methods:
 ```java
 // FindPath
@@ -108,7 +108,7 @@ PathFindStrategy has one implementation:
 ```java
 com.alexanderrodnin.simplegraphlib.finder.FirstFoundPathFindStrategy
 ```
-It's a simple recursive in depth algorithm of finding first(path doesn’t have to be optima) between two vertexes. 
+It's a simple recursive in depth algorithm of finding first(path doesn’t have to be optima) between two vertices. 
 
 
 ### Exceptions

@@ -34,12 +34,12 @@ public class UndirectedGraphTest {
      */
     //@formatter:on
     @Test
-    void vertexesTest() {
-        Set<String> vertexes = new HashSet<>(Arrays.asList("A", "B", "C", "D"));
-        vertexes.forEach(vertex -> graph.addVertex(vertex));
+    void verticesTest() {
+        Set<String> vertices = new HashSet<>(Arrays.asList("A", "B", "C", "D"));
+        vertices.forEach(vertex -> graph.addVertex(vertex));
 
-        Assertions.assertEquals(vertexes.size(), model.getAllVertexes().size());
-        Assertions.assertTrue(vertexes.containsAll(model.getAllVertexes()));
+        Assertions.assertEquals(vertices.size(), model.getAllVertices().size());
+        Assertions.assertTrue(vertices.containsAll(model.getAllVertices()));
     }
 
     //@formatter:off
@@ -49,14 +49,14 @@ public class UndirectedGraphTest {
     //@formatter:on
     @Test
     void edgesTest() {
-        Set<String> vertexes = new HashSet<>(Arrays.asList("A", "B"));
-        vertexes.forEach(vertex -> graph.addVertex(vertex));
+        Set<String> vertices = new HashSet<>(Arrays.asList("A", "B"));
+        vertices.forEach(vertex -> graph.addVertex(vertex));
         graph.addEdge(new Edge<>("A", "B"));
 
-        Assertions.assertEquals(1, model.getEdgedVertexes("A").size());
+        Assertions.assertEquals(1, model.getEdgedVertices("A").size());
         Assertions.assertTrue(model.containsEdge("A", "B"));
 
-        Assertions.assertEquals(1, model.getEdgedVertexes("B").size());
+        Assertions.assertEquals(1, model.getEdgedVertices("B").size());
         Assertions.assertTrue(model.containsEdge("B", "A"));
     }
 

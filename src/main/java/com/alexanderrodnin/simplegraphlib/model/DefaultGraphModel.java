@@ -22,7 +22,7 @@ public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
     }
 
     @Override
-    public Set<Vertex> getAllVertexes() {
+    public Set<Vertex> getAllVertices() {
         return graph.keySet();
     }
 
@@ -36,7 +36,7 @@ public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
     }
 
     @Override
-    public Set<Vertex> getEdgedVertexes(Vertex vertex) {
+    public Set<Vertex> getEdgedVertices(Vertex vertex) {
         return graph.get(vertex);
     }
 

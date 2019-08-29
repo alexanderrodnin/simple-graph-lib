@@ -18,7 +18,7 @@ public class GraphBuilder<Vertex> {
 
     private GraphType graphType;
     private PathFindStrategy<Vertex> pathFindStrategy;
-    private List<Vertex> vertexes = new ArrayList<>();
+    private List<Vertex> vertices = new ArrayList<>();
     private List<Edge<Vertex>> edges = new ArrayList<>();
     private GraphModel<Vertex> graphModel;
 
@@ -45,7 +45,7 @@ public class GraphBuilder<Vertex> {
     }
 
     public GraphBuilder<Vertex> addVertex(Vertex vertex) {
-        vertexes.add(vertex);
+        vertices.add(vertex);
         return this;
     }
 
@@ -62,7 +62,7 @@ public class GraphBuilder<Vertex> {
     public Graph<Vertex> build() {
         Graph<Vertex> graph = graph();
 
-        vertexes.forEach(graph::addVertex);
+        vertices.forEach(graph::addVertex);
         edges.forEach(graph::addEdge);
 
         return graph;
