@@ -16,7 +16,21 @@ Graph has operations:
   
 Vertex is a user defined type.
 
-### Api
+### APIs
+#### Vertex
+Vertex is a user defined type.
+#### Edge
+```java
+com.alexanderrodnin.simplegraphlib.model.Edge
+```
+Edge - data class. Represents connection between two vertices.
+##### Methods:
+```java
+//source vertex
+Vertex getSource() 
+//destination vertex
+Vertex getDestination()
+```
 #### Graph 
 ```java
 com.alexanderrodnin.simplegraphlib.Graph
@@ -57,7 +71,7 @@ void addVertex(Vertex vertex);
 // Add edge
 void addEdge(Vertex source, Vertex destination);
 
-// Returns all vertexies
+// Returns all vertices
 Set<Vertex> getAllVertices();
 
 // Returns all edges
@@ -118,7 +132,7 @@ com.alexanderrodnin.simplegraphlib.exceptions.VertexAlreadyExistException
 ```
 throws if graph already contains the vertex.
 
-#### VertexAlreadyExistException
+#### EdgeAlreadyExistException
 ```java
 com.alexanderrodnin.simplegraphlib.exceptions.EdgeAlreadyExistException
 ```
@@ -128,6 +142,7 @@ throws if graph already contains the edge.
 ```java
 com.alexanderrodnin.simplegraphlib.exceptions.GraphHasNotContainVertex
 ```
+throws if graph has not contain vertex
 
 ### GraphBuilder
 Graph builder represents simple interface for instantiation of graph.

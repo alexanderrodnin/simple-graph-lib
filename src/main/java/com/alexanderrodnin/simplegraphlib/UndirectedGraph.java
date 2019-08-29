@@ -4,6 +4,10 @@ import com.alexanderrodnin.simplegraphlib.finder.PathFindStrategy;
 import com.alexanderrodnin.simplegraphlib.model.Edge;
 import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
+/**
+ * Undirect graph implementation
+ * @param <Vertex> - vertex
+ */
 public class UndirectedGraph<Vertex> extends AbstractBaseGraph<Vertex> {
 
     public UndirectedGraph() {

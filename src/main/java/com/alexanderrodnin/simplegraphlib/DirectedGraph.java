@@ -4,6 +4,10 @@ import com.alexanderrodnin.simplegraphlib.finder.PathFindStrategy;
 import com.alexanderrodnin.simplegraphlib.model.Edge;
 import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
+/**
+ * Direct graph implementation
+ * @param <Vertex> - vertex
+ */
 public class DirectedGraph<Vertex> extends AbstractBaseGraph<Vertex> {
 
     public DirectedGraph() {

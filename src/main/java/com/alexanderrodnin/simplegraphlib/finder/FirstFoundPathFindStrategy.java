@@ -4,6 +4,11 @@ import com.alexanderrodnin.simplegraphlib.model.GraphModel;
 
 import java.util.*;
 
+/**
+ * PathFindStrategy has one implementation.
+ * Simple recursive in depth algorithm of finding first(path doesn’t have to be optima) between two vertices.
+ * @param <Vertex> vertex
+ */
 public class FirstFoundPathFindStrategy<Vertex> implements PathFindStrategy<Vertex> {
 
     private static class Wrapper<T> {
