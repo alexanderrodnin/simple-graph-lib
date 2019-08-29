@@ -26,6 +26,9 @@ public abstract class AbstractBaseGraph<Vertex> implements Graph<Vertex>  {
         this.pathFindStrategy = pathFindStrategy;
     }
 
+    /**
+     * @see Graph#addVertex
+     */
     @Override
     public void addVertex(Vertex vertex) {
         if (model.containsVertex(vertex)) {

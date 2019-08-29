@@ -10,22 +10,35 @@ public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
 
     private final Map<Vertex, Set<Vertex>> graph = new HashMap<>();
 
+    /**
+     * @see GraphModel#addVertex(Object)
+     */
     @Override
     public void addVertex(Vertex vertex) {
         graph.put(vertex, new HashSet<>());
     }
 
+
+    /**
+     * @see GraphModel#addEdge(Object, Object)
+     */
     @Override
     public void addEdge(Vertex source, Vertex destination) {
         graph.get(source).add(destination);
 
     }
 
+    /**
+     * @see GraphModel#getAllVertices()
+     */
     @Override
     public Set<Vertex> getAllVertices() {
         return graph.keySet();
     }
 
+    /**
+     * @see GraphModel#getAllEdges()
+     */
     @Override
     public Set<Edge> getAllEdges() {
         return graph.keySet().stream()
@@ -35,16 +48,26 @@ public class DefaultGraphModel<Vertex> implements GraphModel<Vertex> {
                 .collect(Collectors.toCollection(HashSet::new));
     }
 
+    /**
+     * @see GraphModel#getEdgedVertices(Object)
+     */
     @Override
     public Set<Vertex> getEdgedVertices(Vertex vertex) {
         return graph.get(vertex);
     }
 
+    /**
+     * @see GraphModel#containsVertex(Object)
+     */
     @Override
     public boolean containsVertex(Vertex vertex) {
         return graph.containsKey(vertex);
     }
 
+
+    /**
+     * @see GraphModel#containsEdge(Object, Object)
+     */
     @Override
     public boolean containsEdge(Vertex source, Vertex destination) {
         return graph.containsKey(source) && graph.get(source).contains(destination);

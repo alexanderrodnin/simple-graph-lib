@@ -14,6 +14,9 @@ public class UndirectedGraph<Vertex> extends AbstractBaseGraph<Vertex> {
         super(model, pathFindStrategy);
     }
 
+    /**
+     * @see Graph#addEdge(Edge)
+     */
     @Override
     public void addEdge(Edge<Vertex> edge) {
         checkContainsVertex(edge.getSource());
