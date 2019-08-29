@@ -4,7 +4,7 @@
 ### Introduction
 Simple graph lib is a lib for working with graph structures.
 
-Library supports 2 types of graphs 
+Library supports 2 types of graphs: 
 - directed
 - undirected
 
@@ -96,7 +96,7 @@ DefaultGraphImplementation represent graph structure as
 private final Map<Vertex, Set<Vertex>> graph = new HashMap<>();
 ```
 Used for Directed and undirected graph.  
-For undirected graph this structure is denormolized. It was made for asses efficiently to vertices and edges with O(1)  
+For undirected graph this structure is denormolized. It was made for asses efficiently to vertices and edges with O(1).  
 Be carefull: methods of DefaultGraphModel:
 ```java
 // Returns all edges
@@ -105,13 +105,13 @@ Set<Edge> getAllEdges();
 // Returns connected vertices
 Set<Vertex> getConnectedVertices(Vertex vertex);
 ```
-Returens mutalbe sets. It also was made for efficient.
+return mutalbe sets. It also was made for efficient.
 
 #### PathFindStrategy 
 ```java
 com.alexanderrodnin.simplegraphlib.finder.PathFindStrategy
 ```
-PathFindStrategy represents the strategy of path finding algorithm between two Vertices
+PathFindStrategy represents the strategy of path finding algorithm between two Vertices.
 ##### Methods:
 ```java
 // FindPath
@@ -142,7 +142,7 @@ throws if graph already contains the edge.
 ```java
 com.alexanderrodnin.simplegraphlib.exceptions.GraphHasNotContainVertex
 ```
-throws if graph has not contain vertex
+throws if graph has not contain vertex.
 
 ### GraphBuilder
 Graph builder represents simple interface for instantiation of graph.
