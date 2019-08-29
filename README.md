@@ -116,7 +116,7 @@ PathFindStrategy represents the strategy of path finding algorithm between two V
 ##### Methods:
 ```java
 // FindPath
-    List<Vertex> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination);
+List<Vertex> findPath(GraphModel<Vertex> graphModel, Vertex source, Vertex destination);
 ```
 ##### Implementations
 PathFindStrategy has one implementation:
