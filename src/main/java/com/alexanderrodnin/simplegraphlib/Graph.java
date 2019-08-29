@@ -5,7 +5,7 @@ import com.alexanderrodnin.simplegraphlib.model.Edge;
 import java.util.List;
 
 /**
- * Graph represents graph structure. Work with user defined type of vertex.
+ * Graph represents a graph structure. Working with user defined type of vertex.
  * @param <Vertex> - vertex.
  */
 public interface Graph<Vertex> {

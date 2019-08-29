@@ -35,7 +35,7 @@ Vertex getDestination()
 ```java
 com.alexanderrodnin.simplegraphlib.Graph
 ```
-Graph represents graph structure. Work with user defined type of vertex.
+Graph represents a graph structure. Working with user defined type of vertex.
 ##### Methods:
 ```java
 // Add vertex to the graph
